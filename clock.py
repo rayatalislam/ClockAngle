@@ -1,4 +1,3 @@
-import math
 hour = int(input())
 min = int(input())
 
