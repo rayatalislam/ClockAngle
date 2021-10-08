@@ -1,11 +1,21 @@
-hour = int(input())
-min = int(input())
+def clock():
+    hour = int(input("Enter Hour: "))
+    min = int(input("Enter Minute"))
 
-res = (hour*60)-(min*11)
-res2 = res/2
+    res = abs((hour*60)-(min*11))
+    res2 = abs(res/2)
 
-if hour < 6:
-	result = res2
-elif hour > 6:
-	result = 360-res2
-print(abs(result))
+    result = abs(res2)
+    result2 = abs(res2-360)
+
+    print(f"The angles are **{result}°** & **{result2}°**")
+
+    veri = abs(result + result2)
+    if veri == 360:
+        print(f"result verified. Cuz the sum is {veri}")
+    else:
+        print(f"Duhh!! It throwed some error {veri} ")
+
+clock()
+
+
